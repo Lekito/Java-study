@@ -28,6 +28,12 @@ public class Usuario {
                 break;
         }
 
+        System.out.println("O canal atual é " + smartTv.canal);
+        System.out.println("Qual canal você quer assistir? ");
+        int canal = sc.nextInt();
+        smartTv.mudarCanal(canal);
+        System.out.println("O novo canal é " + smartTv.canal);
+
         sc.close();
     }
 }
