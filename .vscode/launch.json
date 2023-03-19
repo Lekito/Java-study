@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ParImpar",
+            "request": "launch",
+            "mainClass": "ParImpar",
+            "projectName": "Java-study_c364c7c4"
+        },
+        {
+            "type": "java",
             "name": "ExBasic",
             "request": "launch",
             "mainClass": "ExBasic",
