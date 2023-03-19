@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Tabuada",
+            "request": "launch",
+            "mainClass": "Tabuada",
+            "projectName": "Java-study_c364c7c4"
+        },
+        {
+            "type": "java",
             "name": "ParImpar",
             "request": "launch",
             "mainClass": "ParImpar",
