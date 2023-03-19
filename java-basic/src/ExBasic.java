@@ -16,6 +16,8 @@ public class ExBasic {
 
             System.out.println("Idade: ");
             idade = sc.nextInt();
+
+            System.out.println("Sou " + nome + " e tenho " + idade + " anos.");
         }
 
         System.out.println("Continua aqui...");
