@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Matriz",
+            "request": "launch",
+            "mainClass": "Matriz",
+            "projectName": "Java-study_c364c7c4"
+        },
+        {
+            "type": "java",
             "name": "NumerosAleatorios",
             "request": "launch",
             "mainClass": "NumerosAleatorios",
