@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "OrdemInversa",
+            "request": "launch",
+            "mainClass": "OrdemInversa",
+            "projectName": "Java-study_c364c7c4"
+        },
+        {
+            "type": "java",
             "name": "Tabuada",
             "request": "launch",
             "mainClass": "Tabuada",
