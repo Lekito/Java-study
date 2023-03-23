@@ -8,5 +8,9 @@ public class Main {
         Calculadora.multiplicacao(7, 8);
         Calculadora.divisao(5, 2.5);
 
+        System.out.println("Exercício mensagem");
+        Mensagem.oberterMensagem(9);
+        Mensagem.oberterMensagem(14);
+        Mensagem.oberterMensagem(1);
     }
 }
