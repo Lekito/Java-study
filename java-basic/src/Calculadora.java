@@ -18,7 +18,28 @@ public class Calculadora {
      * @param numeroDois este é segundo parâmetro do método
      * @return int o resultado deste método é a soma dos dois números.
      */
-    public int somar(int numeroUm, int numeroDois) {
-        return numeroUm + numeroDois;
+    public static void soma(int numeroUm, int numeroDois) {
+        int resultado = numeroUm + numeroDois;
+
+        System.out.println("A soma " + numeroUm + " + " + numeroDois + " = " + resultado);
     }
+
+    public static void subtracao(double numero1, double numero2) {
+        double resultado = numero1 - numero2;
+
+        System.out.println(" A subtracao " + numero1 + " - " + numero2 + " = " + resultado);
+    }
+
+    public static void multiplicacao(double numero1, double numero2) {
+        double resultado = numero1 * numero2;
+
+        System.out.println("A multiplicação " + numero1 + " x " + numero2 + " = " + resultado);
+    }
+
+    public static void divisao(double numero1, double numero2) {
+        double resultado = numero1 / numero2;
+
+        System.out.println("A divisão " + numero1 + " / " + numero2 + " = " + resultado);
+    }
+
 }

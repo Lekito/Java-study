@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Java-study_c364c7c4"
+        },
+        {
+            "type": "java",
             "name": "Matriz",
             "request": "launch",
             "mainClass": "Matriz",
