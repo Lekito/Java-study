@@ -11,6 +11,8 @@ public class App {
         System.out.println(carro1.getCapacidadeTanque());
         System.out.println(carro1.totalValorTanque(6.39));
 
+        // Outra forma de instânciar
+        // Usando a sobrecarga do construtor Carro
         Carro carro2 = new Carro("Cinza", "Mercedes Classe C", 66);
 
         System.out.println(carro2.getModelo());
