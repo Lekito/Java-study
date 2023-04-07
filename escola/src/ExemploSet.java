@@ -3,6 +3,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class ExemploSet {
     public static void main(String[] args) {
@@ -51,5 +53,26 @@ public class ExemploSet {
 
         System.out.println(notas);
 
+        // LinkedHashSet
+        // ----------------------------------------------------------------
+        System.out.println("Exiba todas as notas na ordem em que foram informados: ");
+        Set<Double> notas2 = new LinkedHashSet<>();
+        notas2.add(7d);
+        notas2.add(8.5);
+        notas2.add(9.3);
+        notas2.add(5d);
+        notas2.add(7d); // não add elemento repetido.
+        notas2.add(0d);
+        notas2.add(3.6);
+        System.out.println("Lista 2 ---------------------");
+        System.out.println(notas2);
+
+        System.out.println("Exiba todas as notas na ordem crescente: ");
+        Set<Double> notas3 = new TreeSet<>(notas2);
+        System.out.println(notas3);
+
+        System.out.println("Apague todo o primeiro conjunto ");
+        notas.clear();
+        System.out.println("Confira se o primeiro conjunto está vazio: " + notas.isEmpty());
     }
 }
