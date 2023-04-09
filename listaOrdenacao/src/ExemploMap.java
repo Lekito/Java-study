@@ -1,6 +1,7 @@
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -57,6 +58,34 @@ public class ExemploMap {
                 System.out.println("Modelo mais eficiente: " + modeloMaisEficiente + " - " + consumoMaisEficiente);
             }
         }
+
+        System.out.println("Exiba o modelo menos econômico e seu consumo: ");
+
+        Double consumoMenosEficiente = Collections.min(carrosPopulares.values());
+        String modeloMenosEficiente = "";
+        for (Map.Entry<String, Double> entry : carrosPopulares.entrySet()) {
+            if (entry.getValue().equals(consumoMenosEficiente)) {
+                modeloMenosEficiente = entry.getKey();
+                System.out.println("Modelo menos eficiente: " + modeloMenosEficiente + " - " + consumoMenosEficiente);
+            }
+        }
+
+        Iterator<Double> iterator = carrosPopulares.values().iterator();
+        Double soma = 0d;
+        while (iterator.hasNext()) {
+            soma += iterator.next();
+        }
+        System.out.println("Exiba a soma dos consumos: " + soma);
+
+        System.out.println("Exiba a média dos consumos deste dicionário de carros: " + (soma / carrosPopulares.size()));
+
+        System.out.println("Remova os modelos com o consumo igual a 15,6 km/l: ");
+        Iterator<Double> iterator1 = carrosPopulares.values().iterator();
+        while (iterator1.hasNext()) {
+            if (iterator1.next().equals(15.6))
+                iterator1.remove();
+        }
+        System.out.println(carrosPopulares);
 
     }
 }
