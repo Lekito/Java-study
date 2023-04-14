@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.DoubleConsumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
@@ -31,6 +32,7 @@ public class App {
                 // numerosAleatorios.forEach(s -> System.out.println(s));
 
                 // Reference Method. Ambos os códigos acima comentados fazem a mesma coisa.
+                System.out.println(numerosAleatorios);
                 numerosAleatorios.stream().forEach(System.out::println);
 
                 System.out.println("Pegue os 5 primeiros números e coloque dentro de um Set:");
@@ -87,11 +89,47 @@ public class App {
                 System.out.println(listaParesMaiores2);
 
                 System.out.println("Mostre a média dos números: ");
+                /*
+                 * 
+                 * numerosAleatorios.stream()
+                 * .mapToInt(new ToIntFunction<String>() {
+                 * public int applyAsInt(String s) {
+                 * return Integer.parseInt(s);
+                 * }
+                 * });
+                 */
+
+                /*
+                 * numerosAleatorios.stream()
+                 * .mapToInt(s -> Integer.parseInt(s))
+                 * .average()
+                 * .ifPresent(new DoubleConsumer() {
+                 * public void accept(double v) {
+                 * System.out.println(v);
+                 * }
+                 * });
+                 */
+
                 numerosAleatorios.stream()
-                                .mapToInt(new ToIntFunction<String>() {
-                                        public int applyAsInt(String s) {
-                                                return Integer.parseInt(s);
-                                        }
-                                });
+                                .mapToInt(s -> Integer.parseInt(s))
+                                .average()
+                                .ifPresent(v -> System.out.println(v));
+
+                System.out.println("Remova os valores ímpares: ");
+                List<Integer> numerosAleatoriosInteger = numerosAleatorios.stream()
+                                .map(Integer::parseInt)
+                                .collect(Collectors.toList());
+                /*
+                 * Esse metodo removeIf não é um stream, pois ele altera a lista.
+                 * numerosAleatoriosInteger.removeIf(new Predicate<Integer>() {
+                 * public boolean test(Integer v) {
+                 * if (v % 2 != 0)
+                 * return true;
+                 * return false;
+                 * }
+                 * });
+                 */
+                numerosAleatoriosInteger.removeIf(integer -> integer % 2 == 0);
+                System.out.println(numerosAleatoriosInteger);
         }
 }
