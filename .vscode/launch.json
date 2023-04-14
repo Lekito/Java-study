@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UncheckedException",
+            "request": "launch",
+            "mainClass": "UncheckedException",
+            "projectName": "Java-study_c364c7c4"
+        },
+        {
+            "type": "java",
             "name": "ExemploOrdenacaoMap",
             "request": "launch",
             "mainClass": "ExemploOrdenacaoMap",
