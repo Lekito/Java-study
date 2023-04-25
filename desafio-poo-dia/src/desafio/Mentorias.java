@@ -2,33 +2,20 @@ package desafio;
 
 import java.time.LocalDate;
 
-public class Mentorias {
-    private String titulo;
-    private String descricao;
+public class Mentorias extends Conteudo {
+
     LocalDate data;
+
+    public double calcularXp() {
+        return XP_PADRAO + 20d;
+    }
 
     public Mentorias() {
 
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
     public LocalDate getData() {
         return data;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public void setData(LocalDate data) {
@@ -38,9 +25,9 @@ public class Mentorias {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return titulo +
+        return getTitulo() +
                 "\n descrição: " +
-                descricao +
+                getDescricao() +
                 "\n data: " +
                 data;
     }
